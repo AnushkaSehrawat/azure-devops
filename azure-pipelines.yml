@@ -40,6 +40,12 @@ stages:
           vmImage: 'ubuntu-latest'
 
         steps:
+
+          - task: Npm@1
+            displayName: NPM Install
+            inputs:
+              command: 'install'
+              workingDir: 'nodejs-docs-hello-world-master'
           - task: Npm@1
             displayName: NPM Test
             inputs:
