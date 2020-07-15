@@ -6,25 +6,29 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'ubuntu-latest'
+stages:
+  - stage: Build
+    jobs:
+    - job: Build
+      pool:
+        vmImage: 'ubuntu-latest'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+      steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '10.x'
+        displayName: 'Install Node.js'
 
-- task: Npm@1
-  displayName: NPM Install
-  inputs:
-    command: 'install'
-    workingDir: 'nodejs-docs-hello-world-master'
+      - task: Npm@1
+        displayName: NPM Install
+        inputs:
+          command: 'install'
+          workingDir: 'nodejs-docs-hello-world-master'
 
-- task: Npm@1
-  displayName: NPM Build
-  inputs:
-    command: 'custom'
-    workingDir: 'nodejs-docs-hello-world-master'
-    customCommand: 'build'
+      - task: Npm@1
+        displayName: NPM Build
+        inputs:
+          command: 'custom'
+          workingDir: 'nodejs-docs-hello-world-master'
+          customCommand: 'build'
   
