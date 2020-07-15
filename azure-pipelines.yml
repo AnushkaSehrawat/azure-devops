@@ -31,4 +31,18 @@ stages:
           command: 'custom'
           workingDir: 'nodejs-docs-hello-world-master'
           customCommand: 'build'
-  
+
+
+  - stage: Test
+    jobs:
+      - job: Test
+        pool:
+          vmImage: 'ubuntu-latest'
+
+        steps:
+          - task: Npm@1
+            displayName: NPM Test
+            inputs:
+              command: 'custom'
+              workingDir: 'nodejs-docs-hello-world-master'
+              customCommand: 'test'
