@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.8130" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2020-07-14T05:36:51" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Node Server" timestamp="2020-07-14T05:36:51" tests="0" file="C:\Users\Administrator.PF04ESS3\Desktop\Nodejs-azure-devops\nodejs-docs-hello-world-master\test\test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="GET /" timestamp="2020-07-14T05:36:51" tests="2" file="C:\Users\Administrator.PF04ESS3\Desktop\Nodejs-azure-devops\nodejs-docs-hello-world-master\test\test.js" time="2.8130" failures="0">
+    <testcase name="Node Server GET /  returns status code 200" time="1.7470" classname=" returns status code 200">
+    </testcase>
+    <testcase name="Node Server GET / returns Hello World" time="1.0660" classname="returns Hello World">
+    </testcase>
+  </testsuite>
+</testsuites>
