@@ -52,3 +52,10 @@ stages:
               command: 'custom'
               workingDir: 'nodejs-docs-hello-world-master'
               customCommand: 'test'
+
+
+          - task: PublishTestResults@2
+            displayName: Publish Test Results
+            inputs:
+              testResultsFormat: 'JUnit'
+              testResultsFiles: '**/test-*.xml'
